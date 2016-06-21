@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pemex Maps</title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="js/routes.js"></script>
+</head>
+<body  onload="initialize()">
+<div>
+<strong>Start:</strong>
+
+<select id="start" onchange="calcRoute();">
+<option value="Monterrey, Nuevo Leon "> Monterrey</option>
+<option value="Tampico,Tamaulipas, Mexico "> Tampico</option>
+<option value="Mexico City,Distrito Federal, Mexico"> Mexico City</option>
+<option value="Veracruz, vercruz-Llave, Mexico"> Veracruz</option>
+<option value="San Luis Potosí, San Luis Potosí "> San Luis Potosi</option>
+<option value="Campeche, Campeche, "> Campeche</option>
+<option value="Tabasco "> Tabasco</option>
+<option value="Salamanca, Guanajuato">Salamanca</option>
+<option value="Cadereyta, Nuevo Leon "> Cadereyta</option>
+<option value="Tula, Hidalgo "> Tula</option>
+</select>
+
+
+
+<strong>End:</strong>
+<select id="end" onchange="calcRoute();">
+<option value="Monterrey, Nuevo Leon "> Monterrey</option>
+<option value="Tampico, Tamaulipas, Mexico"> Tampico</option>
+<option value="Mexico City, Distrito federal, Mexico"> Mexico City</option>
+<option value="Veracruz, vercruz-Llave, Mexico"> Veracruz</option>
+<option value="San Luis Potosí, San Luis Potosí "> San Luis Potosi</option>
+<option value="Campeche, Campeche "> Campeche</option>
+<option value="Tabasco, Tabasco "> Tabasco</option>
+<option value="Salamanca, Guanajuato">Salamanca</option>
+<option value="Cadereyta, Nuevo Leon "> Cadereyta</option>
+<option value="Tula "> Tula</option>
+</select>
+</div>
+<h3 >Distance: <strong id="distance">0</strong> Km. <br/></h3>
+Month: <strong id="months">0</strong><br/>
+Robots: <strong id="robot">0</strong><br/>
+
+
+
+<table  border= 0>
+        <tr>
+ 	 		<td> <h4>Entry routes: </h4> </td>
+ 	 		<td><h4> Exit routes:  </h4></td>
+ 	 		<td><h4> Robots:  </h4></td>
+ 	 		<td><h4> Total km :  </h4></td>
+ 	 		
+ 	 	</tr>
+
+
+ 	 	<tr>
+ 	 		<td> <h3><strong id="combost">0 </strong>  </h3></td>
+ 	 		<td><h3><strong id="endAcumludador">0  </strong></h3> </td>
+ 	 		<td> <h3><strong id=robotarrg>0 </strong>  </h3> </td>
+ 	 		<td><h3><strong id="Tdisarrg">0  </strong></h3>  </td>
+ 	 	</tr>
+ 	 	<tr>
+ 	 	<td> </td>
+ 	 		<td><h4><strong >Total: </strong></h4> </td>
+ 	 		<td> <h5><strong id=trobs>0</strong><br /></h5> </td>
+ 	 		<td><h5><strong id="totaldis">0</strong> Km. </h5>  </td>
+ 	 	</tr>
+ 	 	
+</table>
+
+
+<div id="map" style="width: 1320px; height: 600px;" ></div>
+
+
+
+</body>
+</html>
